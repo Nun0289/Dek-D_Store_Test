@@ -13,6 +13,7 @@ ${email_success}                champza699@hotmail.com
 ${password_success}             699champza
 ${btn_login}                    //button[@class='btn btn-primary btn-block btn-lg']
 ${btn_follow}                   //a[@class='btn btn-primary']
+${btn_unfollow}                 //a[@id='store-follow']
 ${open_menu}                    //li[@class='login-menu']/a
 ${btn_to_view_follow_store}     //li[@class='login-menu open']/ul[@class='dropdown-menu -right']/li[1]
 ***Keywords***
@@ -36,6 +37,10 @@ Click Button To Follow Store
     [Arguments]                  ${btn}
     Element Should Be Visible    ${btn}
     Click Element                ${btn}
+Click Button To UnFollow Store
+    [Arguments]                  ${btn}
+    Element Should Be Visible    ${btn}
+    Click Element                ${btn}
 Click Open Menu and Click to View Follow Store
     [Arguments]                  ${btn}                 ${btn_follow_store}    
     Element Should Be Visible    ${btn}
@@ -48,8 +53,18 @@ Follow Store - success
     Open Browser                                      about:blank                     chrome
     Go To                                             ${url_Dekd_Store_Login_Page}
     Verify DekD Login page                            ${title_login_page}
-    Input Information For Login                       ${input_email}                  ${input_password}               ${email_success}    ${password_success}
+    Input Information For Login                       ${input_email}                  ${input_password}              ${email_success}    ${password_success}
     Click Login Button                                ${btn_login}
     Verify DekD Home page                             ${title_home_page}
     Click Button To Follow Store                      ${btn_follow}
-    Click Open Menu and Click to View Follow Store    ${open_menu}                    ${btn_to_view_follow_store} 
+    Click Open Menu and Click to View Follow Store    ${open_menu}                    ${btn_to_view_follow_store}
+UnFollow Store - success
+    [tags]                                            success
+    Open Browser                                      about:blank                     chrome
+    Go To                                             ${url_Dekd_Store_Login_Page}
+    Verify DekD Login page                            ${title_login_page}
+    Input Information For Login                       ${input_email}                  ${input_password}              ${email_success}    ${password_success}
+    Click Login Button                                ${btn_login}
+    Verify DekD Home page                             ${title_home_page}
+    Click Button To UnFollow Store                    ${btn_unfollow}
+    Click Open Menu and Click to View Follow Store    ${open_menu}                    ${btn_to_view_follow_store}    
