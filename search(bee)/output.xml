@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.8.1 on win32)" generated="20210506 03:38:25.928" rpa="false" schemaversion="2">
+<suite id="s1" name="Search" source="C:\Users\cynbe\Documents\GitHub\Dek-D_Store_Test\search(bee)\search.robot">
+<test id="s1-t1" name="Show search details">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210506 03:38:26.248" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210506 03:38:26.246" endtime="20210506 03:38:29.238"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url_Dekd_Store}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210506 03:38:29.239" level="INFO">Opening url 'https://www.dekdstore.com/th'</msg>
+<status status="PASS" starttime="20210506 03:38:29.239" endtime="20210506 03:38:36.200"/>
+</kw>
+<kw name="Input Value For Search">
+<arg>${input_search}</arg>
+<arg>${search_value}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_search}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210506 03:38:36.236" level="INFO">Element '//body/nav[@id='header-top']/div[1]/div[1]/div[2]/form[1]/div[1]/input[1]' is displayed.</msg>
+<status status="PASS" starttime="20210506 03:38:36.202" endtime="20210506 03:38:36.236"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_search}</arg>
+<arg>${search_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210506 03:38:36.237" level="INFO">Typing text 'ปากกา' into text field '//body/nav[@id='header-top']/div[1]/div[1]/div[2]/form[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20210506 03:38:36.236" endtime="20210506 03:38:37.109"/>
+</kw>
+<status status="PASS" starttime="20210506 03:38:36.201" endtime="20210506 03:38:37.109"/>
+</kw>
+<kw name="Click Search Button">
+<arg>${search_btn}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210506 03:38:37.143" level="INFO">Element '//body/nav[@id='header-top']/div[1]/div[1]/div[2]/form[1]/div[1]/span[1]/button[1]' is displayed.</msg>
+<status status="PASS" starttime="20210506 03:38:37.111" endtime="20210506 03:38:37.143"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210506 03:38:37.144" level="INFO">Clicking element '//body/nav[@id='header-top']/div[1]/div[1]/div[2]/form[1]/div[1]/span[1]/button[1]'.</msg>
+<status status="PASS" starttime="20210506 03:38:37.143" endtime="20210506 03:38:37.552"/>
+</kw>
+<status status="PASS" starttime="20210506 03:38:37.110" endtime="20210506 03:38:37.553"/>
+</kw>
+<tag>success</tag>
+<status status="PASS" starttime="20210506 03:38:26.245" endtime="20210506 03:38:37.557"/>
+</test>
+<status status="PASS" starttime="20210506 03:38:25.931" endtime="20210506 03:38:37.564"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">success</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Search">Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
