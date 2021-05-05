@@ -12,14 +12,21 @@ ${input_email}            //*[@id="email"]
 ${input_cemail}           //*[@id="cemail"]
 ${input_password}         //*[@id="password"]
 ${input_cpassword}        //*[@id="cpassword"]
-${btn_agreement}          //*[@for="privacyPolicy"]
-${btn_register}           //*[@id="submitBtn"]
+${btn_agreement}          //div[@class='checkbox text-left mt_0 text col-xs-6 col-xs-offset-4']
+${btn_register}           //button[@id='submitBtn']
 ${firstname_success}      Thanawat
 ${lastname_success}       Phutchip
 ${email_success}          champza699@hotmail.com
 ${cemail_success}         champza699@hotmail.com
 ${password_success}       699champza
 ${cpassword_success}      699champza
+${firstname_error}        //*[@id='firstname-error']
+${lastname_error}         //*[@id='lastname-error']
+${email_error}            //*[@id='email-error']
+${cemail_error}           //*[@id='cemail-error']
+${password_error}         //*[@id='password-error']
+${cpassword_error}        //*[@id='cpassword-error']
+${exist_email}            //div[@class='col-xs-6']/span[@id='email-error']
 ***Keywords***
 Verify DekD Register page
     [Arguments]        ${title}
@@ -54,6 +61,9 @@ Verify Register Fail
     Element Should Be Visible    ${xpath_cemail}
     Element Should Be Visible    ${xpath_password}
     Element Should Be Visible    ${xpath_cpassword}
+Verify Email Exist
+    [Arguments]                  ${xpath_email_exist}
+    Element Should Be Visible    ${xpath_email_exist}
 ***Test Cases***
 Register DekD Store
     [tags]                            success
@@ -63,5 +73,21 @@ Register DekD Store
     Input Information For Register    ${input_firstname}        ${input_lastname}    ${input_email}    ${input_cemail}    ${input_password}    ${input_cpassword}    ${firstname_success}    ${lastname_success}    ${email_success}    ${cemail_success}    ${password_success}    ${cpassword_success}
     Check Button Agreement            ${btn_agreement}
     Click Button Register             ${btn_register}
-
+Register DekD Store Not Input Anyting- Fail
+    [tags]                       fail
+    Open Browser                 about:blank               chrome
+    Go To                        ${url_Dekd_Store_Page}
+    Verify DekD Register page    ${title_Dekd}
+    Check Button Agreement       ${btn_agreement}
+    Click Button Register        ${btn_register}
+    Verify Register Fail         ${firstname_error}        ${lastname_error}    ${email_error}    ${cemail_error}    ${password_error}    ${cpassword_error}
+Register DekD Store Input Exist Email in System- Fail
+    [tags]                            fail
+    Open Browser                      about:blank               chrome
+    Go To                             ${url_Dekd_Store_Page}
+    Verify DekD Register page         ${title_Dekd}
+    Input Information For Register    ${input_firstname}        ${input_lastname}    ${input_email}    ${input_cemail}    ${input_password}    ${input_cpassword}    ${firstname_success}    ${lastname_success}    ${email_success}    ${cemail_success}    ${password_success}    ${cpassword_success}
+    Check Button Agreement            ${btn_agreement}
+    Click Button Register             ${btn_register}
+    Verify Email Exist                ${exist_email}
 

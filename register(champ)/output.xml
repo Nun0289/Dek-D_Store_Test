@@ -1,61 +1,209 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.1 (Python 3.8.1 on win32)" generated="20210505 00:05:50.147" rpa="false" schemaversion="2">
+<robot generator="Robot 4.0.1 (Python 3.8.1 on win32)" generated="20210505 14:39:22.709" rpa="false" schemaversion="2">
 <suite id="s1" name="Register" source="C:\Users\acer\Desktop\งาน\SW TEST\Dek-D_Store_Test\register(champ)\register.robot">
 <test id="s1-t1" name="Register DekD Store">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210505 00:05:50.671" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210505 00:05:50.671" endtime="20210505 00:05:52.798"/>
+<msg timestamp="20210505 14:39:23.087" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210505 14:39:23.087" endtime="20210505 14:39:25.040"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${url_Dekd_Store_Page}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210505 00:05:52.800" level="INFO">Opening url 'https://www.dekdstore.com/th/register'</msg>
-<status status="PASS" starttime="20210505 00:05:52.799" endtime="20210505 00:05:57.630"/>
+<msg timestamp="20210505 14:39:25.042" level="INFO">Opening url 'https://www.dekdstore.com/th/register'</msg>
+<status status="PASS" starttime="20210505 14:39:25.041" endtime="20210505 14:39:29.315"/>
 </kw>
 <kw name="Verify DekD Register page">
 <arg>${title_Dekd}</arg>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${title}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20210505 00:05:57.665" level="INFO">Page title is 'สร้างบัญชีสมาชิก / BentoWeb - Dek-D's Store Official'.</msg>
-<status status="PASS" starttime="20210505 00:05:57.636" endtime="20210505 00:05:57.665"/>
+<msg timestamp="20210505 14:39:29.327" level="INFO">Page title is 'สร้างบัญชีสมาชิก / BentoWeb - Dek-D's Store Official'.</msg>
+<status status="PASS" starttime="20210505 14:39:29.318" endtime="20210505 14:39:29.327"/>
 </kw>
-<status status="PASS" starttime="20210505 00:05:57.634" endtime="20210505 00:05:57.666"/>
+<status status="PASS" starttime="20210505 14:39:29.317" endtime="20210505 14:39:29.328"/>
+</kw>
+<kw name="Input Information For Register">
+<arg>${input_firstname}</arg>
+<arg>${input_lastname}</arg>
+<arg>${input_email}</arg>
+<arg>${input_cemail}</arg>
+<arg>${input_password}</arg>
+<arg>${input_cpassword}</arg>
+<arg>${firstname_success}</arg>
+<arg>${lastname_success}</arg>
+<arg>${email_success}</arg>
+<arg>${cemail_success}</arg>
+<arg>${password_success}</arg>
+<arg>${cpassword_success}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_firstname}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 14:39:29.370" level="INFO">Element '//*[@id="firstname"]' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:29.331" endtime="20210505 14:39:29.370"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_lastname}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 14:39:29.426" level="INFO">Element '//*[@id="lastname"]' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:29.370" endtime="20210505 14:39:29.427"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_email}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 14:39:29.456" level="INFO">Element '//*[@id="email"]' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:29.427" endtime="20210505 14:39:29.456"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_cemail}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 14:39:29.502" level="INFO">Element '//*[@id="cemail"]' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:29.457" endtime="20210505 14:39:29.503"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_password}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 14:39:29.535" level="INFO">Element '//*[@id="password"]' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:29.503" endtime="20210505 14:39:29.536"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_cpassword}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 14:39:29.560" level="INFO">Element '//*[@id="cpassword"]' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:29.536" endtime="20210505 14:39:29.560"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_firstname}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 14:39:29.561" level="INFO">Typing text 'Thanawat' into text field '//*[@id="firstname"]'.</msg>
+<status status="PASS" starttime="20210505 14:39:29.560" endtime="20210505 14:39:29.690"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_lastname}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 14:39:29.691" level="INFO">Typing text 'Phutchip' into text field '//*[@id="lastname"]'.</msg>
+<status status="PASS" starttime="20210505 14:39:29.691" endtime="20210505 14:39:29.819"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 14:39:29.820" level="INFO">Typing text 'champza699@hotmail.com' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20210505 14:39:29.820" endtime="20210505 14:39:29.963"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_cemail}</arg>
+<arg>${cemail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 14:39:29.964" level="INFO">Typing text 'champza699@hotmail.com' into text field '//*[@id="cemail"]'.</msg>
+<status status="PASS" starttime="20210505 14:39:29.964" endtime="20210505 14:39:30.117"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 14:39:30.118" level="INFO">Typing text '699champza' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20210505 14:39:30.117" endtime="20210505 14:39:30.241"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_cpassword}</arg>
+<arg>${cpassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 14:39:30.242" level="INFO">Typing text '699champza' into text field '//*[@id="cpassword"]'.</msg>
+<status status="PASS" starttime="20210505 14:39:30.242" endtime="20210505 14:39:30.398"/>
+</kw>
+<status status="PASS" starttime="20210505 14:39:29.329" endtime="20210505 14:39:30.399"/>
 </kw>
 <kw name="Check Button Agreement">
 <arg>${btn_agreement}</arg>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${btn}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20210505 00:05:57.718" level="INFO">Element '//*[@for="privacyPolicy"]' is displayed.</msg>
-<status status="PASS" starttime="20210505 00:05:57.668" endtime="20210505 00:05:57.719"/>
+<msg timestamp="20210505 14:39:30.438" level="INFO">Element '//div[@class='checkbox text-left mt_0 text col-xs-6 col-xs-offset-4']' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:30.402" endtime="20210505 14:39:30.438"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btn}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210505 00:05:57.719" level="INFO">Clicking element '//*[@for="privacyPolicy"]'.</msg>
-<status status="PASS" starttime="20210505 00:05:57.719" endtime="20210505 00:05:57.862"/>
+<msg timestamp="20210505 14:39:30.439" level="INFO">Clicking element '//div[@class='checkbox text-left mt_0 text col-xs-6 col-xs-offset-4']'.</msg>
+<status status="PASS" starttime="20210505 14:39:30.438" endtime="20210505 14:39:30.548"/>
 </kw>
-<status status="PASS" starttime="20210505 00:05:57.666" endtime="20210505 00:05:57.862"/>
+<status status="PASS" starttime="20210505 14:39:30.401" endtime="20210505 14:39:30.549"/>
 </kw>
 <kw name="Click Button Register">
 <arg>${btn_register}</arg>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${btn}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20210505 00:05:57.921" level="INFO">Element '//*[@id="submitBtn"]' is displayed.</msg>
-<status status="PASS" starttime="20210505 00:05:57.865" endtime="20210505 00:05:57.921"/>
+<msg timestamp="20210505 14:39:30.590" level="INFO">Element '//button[@id='submitBtn']' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:30.552" endtime="20210505 14:39:30.591"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btn}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210505 00:05:57.922" level="INFO">Clicking element '//*[@id="submitBtn"]'.</msg>
-<status status="PASS" starttime="20210505 00:05:57.921" endtime="20210505 00:05:57.990"/>
+<msg timestamp="20210505 14:39:30.592" level="INFO">Clicking element '//button[@id='submitBtn']'.</msg>
+<status status="PASS" starttime="20210505 14:39:30.591" endtime="20210505 14:39:30.655"/>
 </kw>
-<status status="PASS" starttime="20210505 00:05:57.864" endtime="20210505 00:05:57.990"/>
+<status status="PASS" starttime="20210505 14:39:30.551" endtime="20210505 14:39:30.655"/>
+</kw>
+<tag>success</tag>
+<status status="PASS" starttime="20210505 14:39:23.085" endtime="20210505 14:39:30.656"/>
+</test>
+<test id="s1-t2" name="Register DekD Store Not Input Anyting- Fail">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210505 14:39:30.660" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210505 14:39:30.660" endtime="20210505 14:39:32.573"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url_Dekd_Store_Page}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210505 14:39:32.575" level="INFO">Opening url 'https://www.dekdstore.com/th/register'</msg>
+<status status="PASS" starttime="20210505 14:39:32.575" endtime="20210505 14:39:39.832"/>
+</kw>
+<kw name="Verify DekD Register page">
+<arg>${title_Dekd}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210505 14:39:39.841" level="INFO">Page title is 'สร้างบัญชีสมาชิก / BentoWeb - Dek-D's Store Official'.</msg>
+<status status="PASS" starttime="20210505 14:39:39.834" endtime="20210505 14:39:39.841"/>
+</kw>
+<status status="PASS" starttime="20210505 14:39:39.833" endtime="20210505 14:39:39.841"/>
+</kw>
+<kw name="Check Button Agreement">
+<arg>${btn_agreement}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 14:39:39.876" level="INFO">Element '//div[@class='checkbox text-left mt_0 text col-xs-6 col-xs-offset-4']' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:39.843" endtime="20210505 14:39:39.876"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210505 14:39:39.877" level="INFO">Clicking element '//div[@class='checkbox text-left mt_0 text col-xs-6 col-xs-offset-4']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210505 14:39:41.151" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210505 14:39:40.972" endtime="20210505 14:39:41.152"/>
+</kw>
+<msg timestamp="20210505 14:39:41.242" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="checkbox text-left mt_0 text col-xs-6 col-xs-offset-4"&gt;...&lt;/div&gt; is not clickable at point (611, 686). Other element would receive the click: &lt;div&gt;...&lt;/div&gt;
+  (Session info: chrome=90.0.4430.93)
+</msg>
+<status status="FAIL" starttime="20210505 14:39:39.876" endtime="20210505 14:39:41.242"/>
+</kw>
+<status status="FAIL" starttime="20210505 14:39:39.842" endtime="20210505 14:39:41.242"/>
+</kw>
+<kw name="Click Button Register">
+<arg>${btn_register}</arg>
+<status status="NOT RUN" starttime="20210505 14:39:41.243" endtime="20210505 14:39:41.243"/>
 </kw>
 <kw name="Verify Register Fail">
 <arg>${firstname_error}</arg>
@@ -64,58 +212,179 @@
 <arg>${cemail_error}</arg>
 <arg>${password_error}</arg>
 <arg>${cpassword_error}</arg>
+<status status="NOT RUN" starttime="20210505 14:39:41.244" endtime="20210505 14:39:41.244"/>
+</kw>
+<tag>fail</tag>
+<status status="FAIL" starttime="20210505 14:39:30.658" endtime="20210505 14:39:41.245">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="checkbox text-left mt_0 text col-xs-6 col-xs-offset-4"&gt;...&lt;/div&gt; is not clickable at point (611, 686). Other element would receive the click: &lt;div&gt;...&lt;/div&gt;
+  (Session info: chrome=90.0.4430.93)
+</status>
+</test>
+<test id="s1-t3" name="Register DekD Store Input Exist Email in System- Fail">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210505 14:39:41.249" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210505 14:39:41.249" endtime="20210505 14:39:44.337"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url_Dekd_Store_Page}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210505 14:39:44.339" level="INFO">Opening url 'https://www.dekdstore.com/th/register'</msg>
+<status status="PASS" starttime="20210505 14:39:44.338" endtime="20210505 14:39:52.614"/>
+</kw>
+<kw name="Verify DekD Register page">
+<arg>${title_Dekd}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210505 14:39:52.625" level="INFO">Page title is 'สร้างบัญชีสมาชิก / BentoWeb - Dek-D's Store Official'.</msg>
+<status status="PASS" starttime="20210505 14:39:52.616" endtime="20210505 14:39:52.625"/>
+</kw>
+<status status="PASS" starttime="20210505 14:39:52.615" endtime="20210505 14:39:52.625"/>
+</kw>
+<kw name="Input Information For Register">
+<arg>${input_firstname}</arg>
+<arg>${input_lastname}</arg>
+<arg>${input_email}</arg>
+<arg>${input_cemail}</arg>
+<arg>${input_password}</arg>
+<arg>${input_cpassword}</arg>
+<arg>${firstname_success}</arg>
+<arg>${lastname_success}</arg>
+<arg>${email_success}</arg>
+<arg>${cemail_success}</arg>
+<arg>${password_success}</arg>
+<arg>${cpassword_success}</arg>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${xpath_firstname}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210505 00:05:58.290" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210505 00:05:58.010" endtime="20210505 00:05:58.290"/>
-</kw>
-<msg timestamp="20210505 00:05:58.445" level="FAIL">Element with locator '//*[@class="firstname-error"]' not found.</msg>
-<status status="FAIL" starttime="20210505 00:05:57.993" endtime="20210505 00:05:58.446"/>
+<msg timestamp="20210505 14:39:52.667" level="INFO">Element '//*[@id="firstname"]' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:52.630" endtime="20210505 14:39:52.668"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${xpath_lastname}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20210505 00:05:58.446" endtime="20210505 00:05:58.446"/>
+<msg timestamp="20210505 14:39:52.700" level="INFO">Element '//*[@id="lastname"]' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:52.668" endtime="20210505 14:39:52.700"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${xpath_email}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20210505 00:05:58.446" endtime="20210505 00:05:58.446"/>
+<msg timestamp="20210505 14:39:52.730" level="INFO">Element '//*[@id="email"]' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:52.701" endtime="20210505 14:39:52.730"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${xpath_cemail}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20210505 00:05:58.448" endtime="20210505 00:05:58.448"/>
+<msg timestamp="20210505 14:39:52.758" level="INFO">Element '//*[@id="cemail"]' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:52.730" endtime="20210505 14:39:52.759"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${xpath_password}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20210505 00:05:58.448" endtime="20210505 00:05:58.448"/>
+<msg timestamp="20210505 14:39:52.786" level="INFO">Element '//*[@id="password"]' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:52.759" endtime="20210505 14:39:52.786"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${xpath_cpassword}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20210505 00:05:58.448" endtime="20210505 00:05:58.448"/>
+<msg timestamp="20210505 14:39:52.814" level="INFO">Element '//*[@id="cpassword"]' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:52.787" endtime="20210505 14:39:52.814"/>
 </kw>
-<status status="FAIL" starttime="20210505 00:05:57.991" endtime="20210505 00:05:58.449"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_firstname}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 14:39:52.814" level="INFO">Typing text 'Thanawat' into text field '//*[@id="firstname"]'.</msg>
+<status status="PASS" starttime="20210505 14:39:52.814" endtime="20210505 14:39:52.938"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_lastname}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 14:39:52.939" level="INFO">Typing text 'Phutchip' into text field '//*[@id="lastname"]'.</msg>
+<status status="PASS" starttime="20210505 14:39:52.938" endtime="20210505 14:39:53.063"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 14:39:53.063" level="INFO">Typing text 'champza699@hotmail.com' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20210505 14:39:53.063" endtime="20210505 14:39:53.217"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_cemail}</arg>
+<arg>${cemail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 14:39:53.218" level="INFO">Typing text 'champza699@hotmail.com' into text field '//*[@id="cemail"]'.</msg>
+<status status="PASS" starttime="20210505 14:39:53.217" endtime="20210505 14:39:53.360"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 14:39:53.361" level="INFO">Typing text '699champza' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20210505 14:39:53.361" endtime="20210505 14:39:53.484"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_cpassword}</arg>
+<arg>${cpassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 14:39:53.485" level="INFO">Typing text '699champza' into text field '//*[@id="cpassword"]'.</msg>
+<status status="PASS" starttime="20210505 14:39:53.484" endtime="20210505 14:39:53.613"/>
+</kw>
+<status status="PASS" starttime="20210505 14:39:52.626" endtime="20210505 14:39:53.613"/>
+</kw>
+<kw name="Check Button Agreement">
+<arg>${btn_agreement}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 14:39:53.644" level="INFO">Element '//div[@class='checkbox text-left mt_0 text col-xs-6 col-xs-offset-4']' is displayed.</msg>
+<status status="PASS" starttime="20210505 14:39:53.614" endtime="20210505 14:39:53.644"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210505 14:39:53.645" level="INFO">Clicking element '//div[@class='checkbox text-left mt_0 text col-xs-6 col-xs-offset-4']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210505 14:39:54.962" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210505 14:39:54.730" endtime="20210505 14:39:54.962"/>
+</kw>
+<msg timestamp="20210505 14:39:54.964" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="checkbox text-left mt_0 text col-xs-6 col-xs-offset-4"&gt;...&lt;/div&gt; is not clickable at point (611, 686). Other element would receive the click: &lt;div&gt;...&lt;/div&gt;
+  (Session info: chrome=90.0.4430.93)
+</msg>
+<status status="FAIL" starttime="20210505 14:39:53.644" endtime="20210505 14:39:54.964"/>
+</kw>
+<status status="FAIL" starttime="20210505 14:39:53.614" endtime="20210505 14:39:54.964"/>
+</kw>
+<kw name="Click Button Register">
+<arg>${btn_register}</arg>
+<status status="NOT RUN" starttime="20210505 14:39:54.965" endtime="20210505 14:39:54.965"/>
+</kw>
+<kw name="Verify Email Exist">
+<arg>${exist_email}</arg>
+<status status="NOT RUN" starttime="20210505 14:39:54.966" endtime="20210505 14:39:54.966"/>
 </kw>
 <tag>fail</tag>
-<status status="FAIL" starttime="20210505 00:05:50.668" endtime="20210505 00:05:58.450">Element with locator '//*[@class="firstname-error"]' not found.</status>
+<status status="FAIL" starttime="20210505 14:39:41.248" endtime="20210505 14:39:54.967">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="checkbox text-left mt_0 text col-xs-6 col-xs-offset-4"&gt;...&lt;/div&gt; is not clickable at point (611, 686). Other element would receive the click: &lt;div&gt;...&lt;/div&gt;
+  (Session info: chrome=90.0.4430.93)
+</status>
 </test>
-<status status="FAIL" starttime="20210505 00:05:50.152" endtime="20210505 00:05:58.454"/>
+<status status="FAIL" starttime="20210505 14:39:22.711" endtime="20210505 14:39:54.972"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">fail</stat>
+<stat pass="0" fail="2" skip="0">fail</stat>
+<stat pass="1" fail="0" skip="0">success</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Register">Register</stat>
+<stat pass="1" fail="2" skip="0" id="s1" name="Register">Register</stat>
 </suite>
 </statistics>
 <errors>
