@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.8.1 on win32)" generated="20210505 16:17:15.679" rpa="false" schemaversion="2">
+<suite id="s1" name="wishList" source="C:\Users\acer\Desktop\งาน\SW TEST\Dek-D_Store_Test\wishList(champ)\wishList.robot">
+<test id="s1-t1" name="Add Wish List and View Wish List- success">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210505 16:17:16.667" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210505 16:17:16.667" endtime="20210505 16:17:19.231"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url_Dekd_Store_Login_Page}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210505 16:17:19.232" level="INFO">Opening url 'https://www.dekdstore.com/th/login'</msg>
+<status status="PASS" starttime="20210505 16:17:19.232" endtime="20210505 16:17:25.785"/>
+</kw>
+<kw name="Verify DekD Login page">
+<arg>${title_login_page}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210505 16:17:25.828" level="INFO">Page title is 'เข้าสู่ระบบ - Dek-D's Store Official'.</msg>
+<status status="PASS" starttime="20210505 16:17:25.788" endtime="20210505 16:17:25.828"/>
+</kw>
+<status status="PASS" starttime="20210505 16:17:25.786" endtime="20210505 16:17:25.828"/>
+</kw>
+<kw name="Input Information For Login">
+<arg>${input_email}</arg>
+<arg>${input_password}</arg>
+<arg>${email_success}</arg>
+<arg>${password_success}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_email}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 16:17:25.868" level="INFO">Element '//input[@id='email']' is displayed.</msg>
+<status status="PASS" starttime="20210505 16:17:25.831" endtime="20210505 16:17:25.868"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_password}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 16:17:25.901" level="INFO">Element '//input[@id='password']' is displayed.</msg>
+<status status="PASS" starttime="20210505 16:17:25.868" endtime="20210505 16:17:25.901"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 16:17:25.902" level="INFO">Typing text 'champza699@hotmail.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20210505 16:17:25.902" endtime="20210505 16:17:26.047"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 16:17:26.048" level="INFO">Typing text '699champza' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20210505 16:17:26.047" endtime="20210505 16:17:26.195"/>
+</kw>
+<status status="PASS" starttime="20210505 16:17:25.829" endtime="20210505 16:17:26.195"/>
+</kw>
+<kw name="Click Login Button">
+<arg>${btn_login}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 16:17:26.226" level="INFO">Element '//button[@class='btn btn-primary btn-block btn-lg']' is displayed.</msg>
+<status status="PASS" starttime="20210505 16:17:26.197" endtime="20210505 16:17:26.226"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210505 16:17:26.228" level="INFO">Clicking element '//button[@class='btn btn-primary btn-block btn-lg']'.</msg>
+<status status="PASS" starttime="20210505 16:17:26.227" endtime="20210505 16:17:36.611"/>
+</kw>
+<status status="PASS" starttime="20210505 16:17:26.196" endtime="20210505 16:17:36.612"/>
+</kw>
+<kw name="Verify DekD Home page">
+<arg>${title_home_page}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210505 16:17:36.627" level="INFO">Page title is 'Dek-D's Store Official'.</msg>
+<status status="PASS" starttime="20210505 16:17:36.614" endtime="20210505 16:17:36.627"/>
+</kw>
+<status status="PASS" starttime="20210505 16:17:36.613" endtime="20210505 16:17:36.628"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url_Dekd_Detail_Product}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210505 16:17:36.628" level="INFO">Opening url 'https://www.dekdstore.com/th/product/634231/product-634231?category_id=119886'</msg>
+<status status="PASS" starttime="20210505 16:17:36.628" endtime="20210505 16:17:37.766"/>
+</kw>
+<kw name="Add WishList">
+<arg>${add_or_removewistlist}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210505 16:17:37.769" level="INFO">Clicking element '//input[@id='addToWishlist']'.</msg>
+<status status="PASS" starttime="20210505 16:17:37.768" endtime="20210505 16:17:37.849"/>
+</kw>
+<status status="PASS" starttime="20210505 16:17:37.767" endtime="20210505 16:17:37.849"/>
+</kw>
+<kw name="Click Open Menu and Click to View Wish List">
+<arg>${open_menu}</arg>
+<arg>${btn_to_view_wishlist}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 16:17:37.891" level="INFO">Element '//li[@class='login-menu']/a' is displayed.</msg>
+<status status="PASS" starttime="20210505 16:17:37.851" endtime="20210505 16:17:37.892"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210505 16:17:37.892" level="INFO">Clicking element '//li[@class='login-menu']/a'.</msg>
+<status status="PASS" starttime="20210505 16:17:37.892" endtime="20210505 16:17:38.542"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_wishlist}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 16:17:38.578" level="INFO">Element '//li[@class='login-menu open']/ul[@class='dropdown-menu -right']/li[2]' is displayed.</msg>
+<status status="PASS" starttime="20210505 16:17:38.543" endtime="20210505 16:17:38.578"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_wishlist}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210505 16:17:38.579" level="INFO">Clicking element '//li[@class='login-menu open']/ul[@class='dropdown-menu -right']/li[2]'.</msg>
+<status status="PASS" starttime="20210505 16:17:38.578" endtime="20210505 16:17:38.639"/>
+</kw>
+<status status="PASS" starttime="20210505 16:17:37.850" endtime="20210505 16:17:38.639"/>
+</kw>
+<tag>success</tag>
+<status status="PASS" starttime="20210505 16:17:16.664" endtime="20210505 16:17:38.640"/>
+</test>
+<test id="s1-t2" name="Remove Wish List and View Wish List- success">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210505 16:17:38.645" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210505 16:17:38.644" endtime="20210505 16:17:40.812"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url_Dekd_Store_Login_Page}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210505 16:17:40.828" level="INFO">Opening url 'https://www.dekdstore.com/th/login'</msg>
+<status status="PASS" starttime="20210505 16:17:40.813" endtime="20210505 16:17:46.678"/>
+</kw>
+<kw name="Verify DekD Login page">
+<arg>${title_login_page}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210505 16:17:46.719" level="INFO">Page title is 'เข้าสู่ระบบ - Dek-D's Store Official'.</msg>
+<status status="PASS" starttime="20210505 16:17:46.681" endtime="20210505 16:17:46.719"/>
+</kw>
+<status status="PASS" starttime="20210505 16:17:46.679" endtime="20210505 16:17:46.720"/>
+</kw>
+<kw name="Input Information For Login">
+<arg>${input_email}</arg>
+<arg>${input_password}</arg>
+<arg>${email_success}</arg>
+<arg>${password_success}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_email}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 16:17:46.760" level="INFO">Element '//input[@id='email']' is displayed.</msg>
+<status status="PASS" starttime="20210505 16:17:46.721" endtime="20210505 16:17:46.760"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_password}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 16:17:46.795" level="INFO">Element '//input[@id='password']' is displayed.</msg>
+<status status="PASS" starttime="20210505 16:17:46.761" endtime="20210505 16:17:46.795"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 16:17:46.796" level="INFO">Typing text 'champza699@hotmail.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20210505 16:17:46.795" endtime="20210505 16:17:46.943"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210505 16:17:46.944" level="INFO">Typing text '699champza' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20210505 16:17:46.943" endtime="20210505 16:17:47.094"/>
+</kw>
+<status status="PASS" starttime="20210505 16:17:46.720" endtime="20210505 16:17:47.094"/>
+</kw>
+<kw name="Click Login Button">
+<arg>${btn_login}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 16:17:47.124" level="INFO">Element '//button[@class='btn btn-primary btn-block btn-lg']' is displayed.</msg>
+<status status="PASS" starttime="20210505 16:17:47.096" endtime="20210505 16:17:47.124"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210505 16:17:47.125" level="INFO">Clicking element '//button[@class='btn btn-primary btn-block btn-lg']'.</msg>
+<status status="PASS" starttime="20210505 16:17:47.125" endtime="20210505 16:17:49.354"/>
+</kw>
+<status status="PASS" starttime="20210505 16:17:47.095" endtime="20210505 16:17:49.354"/>
+</kw>
+<kw name="Verify DekD Home page">
+<arg>${title_home_page}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210505 16:17:49.362" level="INFO">Page title is 'Dek-D's Store Official'.</msg>
+<status status="PASS" starttime="20210505 16:17:49.356" endtime="20210505 16:17:49.363"/>
+</kw>
+<status status="PASS" starttime="20210505 16:17:49.355" endtime="20210505 16:17:49.363"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.dekdstore.com/th/customer/wishlist</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210505 16:17:49.365" level="INFO">Opening url 'https://www.dekdstore.com/th/customer/wishlist'</msg>
+<status status="PASS" starttime="20210505 16:17:49.364" endtime="20210505 16:17:51.682"/>
+</kw>
+<kw name="Go to Detail Product">
+<arg>//a[@class='title-link']</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 16:17:51.719" level="INFO">Element '//a[@class='title-link']' is displayed.</msg>
+<status status="PASS" starttime="20210505 16:17:51.684" endtime="20210505 16:17:51.719"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210505 16:17:51.720" level="INFO">Clicking element '//a[@class='title-link']'.</msg>
+<status status="PASS" starttime="20210505 16:17:51.720" endtime="20210505 16:17:52.760"/>
+</kw>
+<status status="PASS" starttime="20210505 16:17:51.683" endtime="20210505 16:17:52.760"/>
+</kw>
+<kw name="Remove WishList">
+<arg>${add_or_remove_wistlist}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210505 16:17:52.763" level="INFO">Clicking element '//input[@id='addToWishlist']'.</msg>
+<status status="PASS" starttime="20210505 16:17:52.762" endtime="20210505 16:17:52.964"/>
+</kw>
+<status status="PASS" starttime="20210505 16:17:52.761" endtime="20210505 16:17:52.964"/>
+</kw>
+<kw name="Click Open Menu and Click to View Wish List">
+<arg>${open_menu}</arg>
+<arg>${btn_to_view_wishlist}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 16:17:53.002" level="INFO">Element '//li[@class='login-menu']/a' is displayed.</msg>
+<status status="PASS" starttime="20210505 16:17:52.967" endtime="20210505 16:17:53.002"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210505 16:17:53.003" level="INFO">Clicking element '//li[@class='login-menu']/a'.</msg>
+<status status="PASS" starttime="20210505 16:17:53.003" endtime="20210505 16:17:53.689"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_wishlist}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210505 16:17:53.719" level="INFO">Element '//li[@class='login-menu open']/ul[@class='dropdown-menu -right']/li[2]' is displayed.</msg>
+<status status="PASS" starttime="20210505 16:17:53.689" endtime="20210505 16:17:53.719"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_wishlist}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210505 16:17:53.719" level="INFO">Clicking element '//li[@class='login-menu open']/ul[@class='dropdown-menu -right']/li[2]'.</msg>
+<status status="PASS" starttime="20210505 16:17:53.719" endtime="20210505 16:17:54.450"/>
+</kw>
+<status status="PASS" starttime="20210505 16:17:52.965" endtime="20210505 16:17:54.450"/>
+</kw>
+<tag>success</tag>
+<status status="PASS" starttime="20210505 16:17:38.642" endtime="20210505 16:17:54.451"/>
+</test>
+<status status="PASS" starttime="20210505 16:17:16.295" endtime="20210505 16:17:54.455"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">success</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="wishList">wishList</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

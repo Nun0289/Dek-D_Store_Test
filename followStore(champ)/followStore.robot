@@ -6,6 +6,7 @@ Library             String
 *** Variable ***
 ${url_Dekd_Store_Login_Page}    https://www.dekdstore.com/th/login
 ${title_login_page}             เข้าสู่ระบบ - Dek-D's Store Official
+${title_home_page}              Dek-D's Store Official
 ${input_email}                  //input[@id='email']
 ${input_password}               //input[@id='password']
 ${email_success}                champza699@hotmail.com
@@ -16,6 +17,9 @@ ${open_menu}                    //li[@class='login-menu']/a
 ${btn_to_view_follow_store}     //li[@class='login-menu open']/ul[@class='dropdown-menu -right']/li[1]
 ***Keywords***
 Verify DekD Login page
+    [Arguments]        ${title}
+    Title Should Be    ${title}
+Verify DekD Home page
     [Arguments]        ${title}
     Title Should Be    ${title}
 Input Information For Login
@@ -46,5 +50,6 @@ Follow Store - success
     Verify DekD Login page                            ${title_login_page}
     Input Information For Login                       ${input_email}                  ${input_password}               ${email_success}    ${password_success}
     Click Login Button                                ${btn_login}
+    Verify DekD Home page                             ${title_home_page}
     Click Button To Follow Store                      ${btn_follow}
     Click Open Menu and Click to View Follow Store    ${open_menu}                    ${btn_to_view_follow_store} 
