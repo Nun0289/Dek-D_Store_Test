@@ -4,29 +4,29 @@ Library             BuiltIn
 Library             String
 # Suite Teardown    Close Browser
 *** Variable ***
-${url_Dekd_Store_Page}    https://www.dekdstore.com/th/register
-${title_Dekd}             สร้างบัญชีสมาชิก / BentoWeb - Dek-D's Store Official
-${input_firstname}        //*[@id="firstname"]
-${input_lastname}         //*[@id="lastname"]
-${input_email}            //*[@id="email"]
-${input_cemail}           //*[@id="cemail"]
-${input_password}         //*[@id="password"]
-${input_cpassword}        //*[@id="cpassword"]
-${btn_agreement}          //div[@class='checkbox text-left mt_0 text col-xs-6 col-xs-offset-4']
-${btn_register}           //button[@id='submitBtn']
-${firstname_success}      Thanawat
-${lastname_success}       Phutchip
-${email_success}          champza699@hotmail.com
-${cemail_success}         champza699@hotmail.com
-${password_success}       699champza
-${cpassword_success}      699champza
-${firstname_error}        //*[@id='firstname-error']
-${lastname_error}         //*[@id='lastname-error']
-${email_error}            //*[@id='email-error']
-${cemail_error}           //*[@id='cemail-error']
-${password_error}         //*[@id='password-error']
-${cpassword_error}        //*[@id='cpassword-error']
-${exist_email}            //div[@class='col-xs-6']/span[@id='email-error']
+${url_Dekd_Store_Register_Page}    https://www.dekdstore.com/th/register
+${title_Dekd}                      สร้างบัญชีสมาชิก / BentoWeb - Dek-D's Store Official
+${input_firstname}                 //*[@id="firstname"]
+${input_lastname}                  //*[@id="lastname"]
+${input_email}                     //*[@id="email"]
+${input_cemail}                    //*[@id="cemail"]
+${input_password}                  //*[@id="password"]
+${input_cpassword}                 //*[@id="cpassword"]
+${btn_agreement}                   //div[@class='checkbox text-left mt_0 text col-xs-6 col-xs-offset-4']
+${btn_register}                    //button[@id='submitBtn']
+${firstname_success}               Thanawat
+${lastname_success}                Phutchip
+${email_success}                   champza699@hotmail.com
+${cemail_success}                  champza699@hotmail.com
+${password_success}                699champza
+${cpassword_success}               699champza
+${firstname_error}                 //*[@id='firstname-error']
+${lastname_error}                  //*[@id='lastname-error']
+${email_error}                     //*[@id='email-error']
+${cemail_error}                    //*[@id='cemail-error']
+${password_error}                  //*[@id='password-error']
+${cpassword_error}                 //*[@id='cpassword-error']
+${exist_email}                     //div[@class='col-xs-6']/span[@id='email-error']
 ***Keywords***
 Verify DekD Register page
     [Arguments]        ${title}
@@ -65,7 +65,7 @@ Verify Email Exist
     [Arguments]                  ${xpath_email_exist}
     Element Should Be Visible    ${xpath_email_exist}
 ***Test Cases***
-Register DekD Store
+Register DekD Store- Success
     [tags]                            success
     Open Browser                      about:blank               chrome
     Go To                             ${url_Dekd_Store_Page}
