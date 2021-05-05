@@ -27,6 +27,10 @@ ${cemail_error}                    //*[@id='cemail-error']
 ${password_error}                  //*[@id='password-error']
 ${cpassword_error}                 //*[@id='cpassword-error']
 ${exist_email}                     //div[@class='col-xs-6']/span[@id='email-error']
+${LOGIN SUCCESS}.png               login สำเร็จ
+${LOGIN FAIL}.png                  login ไม่สำเร็จ
+${FACEBOOK FAIL}.png                login facebook ไม่สำเร็จ
+search-query form-control
 ***Keywords***
 Verify DekD Register page
     [Arguments]        ${title}
@@ -73,6 +77,7 @@ Register DekD Store- Success
     Input Information For Register    ${input_firstname}        ${input_lastname}    ${input_email}    ${input_cemail}    ${input_password}    ${input_cpassword}    ${firstname_success}    ${lastname_success}    ${email_success}    ${cemail_success}    ${password_success}    ${cpassword_success}
     Check Button Agreement            ${btn_agreement}
     Click Button Register             ${btn_register}
+    Capture Page Screenshot           ${LOGIN SUCCESS}.png
 Register DekD Store Not Input Anyting- Fail
     [tags]                       fail
     Open Browser                 about:blank               chrome
@@ -81,6 +86,7 @@ Register DekD Store Not Input Anyting- Fail
     Check Button Agreement       ${btn_agreement}
     Click Button Register        ${btn_register}
     Verify Register Fail         ${firstname_error}        ${lastname_error}    ${email_error}    ${cemail_error}    ${password_error}    ${cpassword_error}
+    Capture Page Screenshot           ${LOGIN FAIL}.png
 Register DekD Store Input Exist Email in System- Fail
     [tags]                            fail
     Open Browser                      about:blank               chrome
@@ -90,4 +96,5 @@ Register DekD Store Input Exist Email in System- Fail
     Check Button Agreement            ${btn_agreement}
     Click Button Register             ${btn_register}
     Verify Email Exist                ${exist_email}
+    Capture Page Screenshot           ${FACEBOOK FAIL}.png
 

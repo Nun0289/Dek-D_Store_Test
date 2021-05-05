@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.9.4 on darwin)" generated="20210506 01:19:46.463" rpa="false" schemaversion="2">
+<suite id="s1" name="wishList" source="/Users/memory/Documents/GitHub/Dek-D_Store_Test/wishList/wishList.robot">
+<test id="s1-t1" name="Add Wish List and View Wish List- success">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210506 01:19:46.688" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210506 01:19:46.687" endtime="20210506 01:19:48.912"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url_Dekd_Store_Login_Page}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210506 01:19:48.913" level="INFO">Opening url 'https://www.dekdstore.com/th/login'</msg>
+<status status="PASS" starttime="20210506 01:19:48.912" endtime="20210506 01:19:53.702"/>
+</kw>
+<kw name="Verify DekD Login page">
+<arg>${title_login_page}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210506 01:19:53.714" level="INFO">Page title is 'เข้าสู่ระบบ - Dek-D's Store Official'.</msg>
+<status status="PASS" starttime="20210506 01:19:53.704" endtime="20210506 01:19:53.714"/>
+</kw>
+<status status="PASS" starttime="20210506 01:19:53.702" endtime="20210506 01:19:53.715"/>
+</kw>
+<kw name="Input Information For Login">
+<arg>${input_email}</arg>
+<arg>${input_password}</arg>
+<arg>${email_success}</arg>
+<arg>${password_success}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_email}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210506 01:19:53.739" level="INFO">Element '//input[@id='email']' is displayed.</msg>
+<status status="PASS" starttime="20210506 01:19:53.716" endtime="20210506 01:19:53.739"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_password}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210506 01:19:53.756" level="INFO">Element '//input[@id='password']' is displayed.</msg>
+<status status="PASS" starttime="20210506 01:19:53.739" endtime="20210506 01:19:53.756"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210506 01:19:53.757" level="INFO">Typing text 'champza699@hotmail.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20210506 01:19:53.757" endtime="20210506 01:19:53.900"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210506 01:19:53.901" level="INFO">Typing text '699champza' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20210506 01:19:53.900" endtime="20210506 01:19:53.992"/>
+</kw>
+<status status="PASS" starttime="20210506 01:19:53.715" endtime="20210506 01:19:53.992"/>
+</kw>
+<kw name="Click Login Button">
+<arg>${btn_login}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210506 01:19:54.011" level="INFO">Element '//button[@class='btn btn-primary btn-block btn-lg']' is displayed.</msg>
+<status status="PASS" starttime="20210506 01:19:53.993" endtime="20210506 01:19:54.011"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210506 01:19:54.012" level="INFO">Clicking element '//button[@class='btn btn-primary btn-block btn-lg']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210506 01:19:55.388" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210506 01:19:55.089" endtime="20210506 01:19:55.388"/>
+</kw>
+<msg timestamp="20210506 01:19:55.392" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" class="btn btn-primary btn-block btn-lg"&gt;...&lt;/button&gt; is not clickable at point (892, 616). Other element would receive the click: &lt;div class="cookies-bar navbar-fixed-bottom" id="cookiesBanner"&gt;...&lt;/div&gt;
+  (Session info: chrome=90.0.4430.93)
+</msg>
+<status status="FAIL" starttime="20210506 01:19:54.011" endtime="20210506 01:19:55.392"/>
+</kw>
+<status status="FAIL" starttime="20210506 01:19:53.992" endtime="20210506 01:19:55.392"/>
+</kw>
+<kw name="Verify DekD Home page">
+<arg>${title_home_page}</arg>
+<status status="NOT RUN" starttime="20210506 01:19:55.393" endtime="20210506 01:19:55.393"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url_Dekd_Detail_Product}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20210506 01:19:55.393" endtime="20210506 01:19:55.393"/>
+</kw>
+<kw name="Add WishList">
+<arg>${add_or_removewistlist}</arg>
+<status status="NOT RUN" starttime="20210506 01:19:55.393" endtime="20210506 01:19:55.393"/>
+</kw>
+<kw name="Click Open Menu and Click to View Wish List">
+<arg>${open_menu}</arg>
+<arg>${btn_to_view_wishlist}</arg>
+<status status="NOT RUN" starttime="20210506 01:19:55.393" endtime="20210506 01:19:55.393"/>
+</kw>
+<tag>success</tag>
+<status status="FAIL" starttime="20210506 01:19:46.686" endtime="20210506 01:19:55.394">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" class="btn btn-primary btn-block btn-lg"&gt;...&lt;/button&gt; is not clickable at point (892, 616). Other element would receive the click: &lt;div class="cookies-bar navbar-fixed-bottom" id="cookiesBanner"&gt;...&lt;/div&gt;
+  (Session info: chrome=90.0.4430.93)
+</status>
+</test>
+<test id="s1-t2" name="Remove Wish List and View Wish List- success">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210506 01:19:55.396" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210506 01:19:55.395" endtime="20210506 01:19:57.660"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url_Dekd_Store_Login_Page}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210506 01:19:57.661" level="INFO">Opening url 'https://www.dekdstore.com/th/login'</msg>
+<status status="PASS" starttime="20210506 01:19:57.660" endtime="20210506 01:20:02.276"/>
+</kw>
+<kw name="Verify DekD Login page">
+<arg>${title_login_page}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210506 01:20:02.296" level="INFO">Page title is 'เข้าสู่ระบบ - Dek-D's Store Official'.</msg>
+<status status="PASS" starttime="20210506 01:20:02.278" endtime="20210506 01:20:02.296"/>
+</kw>
+<status status="PASS" starttime="20210506 01:20:02.276" endtime="20210506 01:20:02.297"/>
+</kw>
+<kw name="Input Information For Login">
+<arg>${input_email}</arg>
+<arg>${input_password}</arg>
+<arg>${email_success}</arg>
+<arg>${password_success}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_email}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210506 01:20:02.328" level="INFO">Element '//input[@id='email']' is displayed.</msg>
+<status status="PASS" starttime="20210506 01:20:02.298" endtime="20210506 01:20:02.329"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${xpath_password}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210506 01:20:02.347" level="INFO">Element '//input[@id='password']' is displayed.</msg>
+<status status="PASS" starttime="20210506 01:20:02.329" endtime="20210506 01:20:02.347"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210506 01:20:02.348" level="INFO">Typing text 'champza699@hotmail.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20210506 01:20:02.347" endtime="20210506 01:20:02.535"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210506 01:20:02.535" level="INFO">Typing text '699champza' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20210506 01:20:02.535" endtime="20210506 01:20:02.625"/>
+</kw>
+<status status="PASS" starttime="20210506 01:20:02.297" endtime="20210506 01:20:02.625"/>
+</kw>
+<kw name="Click Login Button">
+<arg>${btn_login}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210506 01:20:02.642" level="INFO">Element '//button[@class='btn btn-primary btn-block btn-lg']' is displayed.</msg>
+<status status="PASS" starttime="20210506 01:20:02.626" endtime="20210506 01:20:02.642"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210506 01:20:02.643" level="INFO">Clicking element '//button[@class='btn btn-primary btn-block btn-lg']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210506 01:20:04.035" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210506 01:20:03.730" endtime="20210506 01:20:04.035"/>
+</kw>
+<msg timestamp="20210506 01:20:04.036" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" class="btn btn-primary btn-block btn-lg"&gt;...&lt;/button&gt; is not clickable at point (892, 616). Other element would receive the click: &lt;div class="cookies-bar navbar-fixed-bottom" id="cookiesBanner"&gt;...&lt;/div&gt;
+  (Session info: chrome=90.0.4430.93)
+</msg>
+<status status="FAIL" starttime="20210506 01:20:02.643" endtime="20210506 01:20:04.036"/>
+</kw>
+<status status="FAIL" starttime="20210506 01:20:02.625" endtime="20210506 01:20:04.036"/>
+</kw>
+<kw name="Verify DekD Home page">
+<arg>${title_home_page}</arg>
+<status status="NOT RUN" starttime="20210506 01:20:04.036" endtime="20210506 01:20:04.036"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.dekdstore.com/th/customer/wishlist</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20210506 01:20:04.036" endtime="20210506 01:20:04.036"/>
+</kw>
+<kw name="Go to Detail Product">
+<arg>//a[@class='title-link']</arg>
+<status status="NOT RUN" starttime="20210506 01:20:04.036" endtime="20210506 01:20:04.036"/>
+</kw>
+<kw name="Remove WishList">
+<arg>${add_or_remove_wistlist}</arg>
+<status status="NOT RUN" starttime="20210506 01:20:04.037" endtime="20210506 01:20:04.037"/>
+</kw>
+<kw name="Click Open Menu and Click to View Wish List">
+<arg>${open_menu}</arg>
+<arg>${btn_to_view_wishlist}</arg>
+<status status="NOT RUN" starttime="20210506 01:20:04.037" endtime="20210506 01:20:04.037"/>
+</kw>
+<tag>success</tag>
+<status status="FAIL" starttime="20210506 01:19:55.395" endtime="20210506 01:20:04.037">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" class="btn btn-primary btn-block btn-lg"&gt;...&lt;/button&gt; is not clickable at point (892, 616). Other element would receive the click: &lt;div class="cookies-bar navbar-fixed-bottom" id="cookiesBanner"&gt;...&lt;/div&gt;
+  (Session info: chrome=90.0.4430.93)
+</status>
+</test>
+<status status="FAIL" starttime="20210506 01:19:46.466" endtime="20210506 01:20:04.038"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">success</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="wishList">wishList</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
